@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="songlib.view.FirstWindowController">
+   <children>
+      <Text fill="#810303" layoutX="98.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Song Detals" />
+      <ButtonBar layoutX="23.0" layoutY="350.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="255.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="23.0">
+        <buttons>
+            <Button minWidth="54.0" mnemonicParsing="false" onAction="#deletePushButton" prefHeight="25.0" text="Delete" textFill="#002bff" />
+            <Button mnemonicParsing="false" onAction="#editPushButton" text="Edit" textFill="#002bff" />
+          <Button mnemonicParsing="false" onAction="#addPushButton" text="Add" textFill="#002bff" />
+        </buttons>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ButtonBar>
+      <GridPane layoutX="23.0" layoutY="50.0" prefHeight="300.0" prefWidth="213.0" AnchorPane.bottomAnchor="50.0" AnchorPane.topAnchor="50.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="37.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text fill="#0400f5" strokeType="OUTSIDE" strokeWidth="0.0" text="Song Name:" />
+            <Text fill="#0400f5" strokeType="OUTSIDE" strokeWidth="0.0" text="Artist" GridPane.rowIndex="2" />
+            <Text fill="#0400f5" strokeType="OUTSIDE" strokeWidth="0.0" text="Album" GridPane.rowIndex="4" />
+            <Text fill="#0400f5" strokeType="OUTSIDE" strokeWidth="0.0" text="Year" GridPane.rowIndex="6" />
+            <Label fx:id="songLabel" prefHeight="17.0" prefWidth="212.0" GridPane.rowIndex="1" />
+            <Label fx:id="artistLabel" prefWidth="212.0" GridPane.rowIndex="3" />
+            <Label fx:id="albumLabel" prefWidth="212.0" GridPane.rowIndex="5" />
+            <Label fx:id="yearLabel" prefWidth="212.0" GridPane.rowIndex="7" />
+         </children>
+      </GridPane>
+      <TableView fx:id="songTable" layoutX="283.0" prefHeight="400.0" prefWidth="316.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="283.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="songColumn" prefWidth="165.5" text="Song Name" />
+          <TableColumn fx:id="artistColumn" prefWidth="149.0" text="Artist Name" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
